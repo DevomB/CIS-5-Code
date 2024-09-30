@@ -1,0 +1,44 @@
+// Included: HW_4-2
+// ===================================================
+// Program: HW_4-2
+// ===================================================
+// Programmer: Devom Brahmbhatt         
+// Class: CIS 5
+// ===================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+
+    cout << "Enter a number: ";
+    cin >> number;
+
+    if (number > 0) {
+        cout << "The number you entered is a positive number." << endl;
+    } else if (number == 0) {
+        cout << "The number you entered is a zero." << endl;
+    } else {
+        cout << "The number you entered is a negative number." << endl;
+    }
+
+    return 0;
+}
+
+// ===================================================
+/* OUTPUT:
+Enter a number: 7
+The number you entered is a positive number.
+*/
+
+/* OUTPUT:
+Enter a number: 0
+The number you entered is a zero.
+*/
+
+/* OUTPUT:
+Enter a number: -7 
+The number you entered is a negative number.
+*/
+// ===================================================
