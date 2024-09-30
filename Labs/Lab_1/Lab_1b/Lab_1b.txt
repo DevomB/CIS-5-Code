@@ -1,0 +1,45 @@
+// Included:  Lab_1b
+// ===================================================
+// Program: Lab_1b
+// ===================================================
+// Programmer: Devom Brahmbhatt         
+// Class: CIS 5
+// ===================================================
+
+#include <iostream>
+#include <string>
+
+int main() {
+    // Var inits
+    std::string firstName, lastName;
+    std::string friendLastName;
+    char friendFirstInitial, friendMiddleInitial;
+
+    // Prints and Inputs ( Grouped similarly )
+    std::cout << "Enter your first name: ";
+    std::cin >> firstName;
+    std::cout << "Enter your last name: ";
+    std::cin >> lastName;
+
+    std::cout << "Hi " << firstName << " " << lastName << ". What is the last name of your friend? ";
+    std::cin >> friendLastName;
+    std::cout << "What is his first initial? ";
+    std::cin >> friendFirstInitial;
+    std::cout << "Wait a minute, what is his middle initial? ";
+    std::cin >> friendMiddleInitial;
+
+    std::cout << "I cannot believe your friend is " << friendFirstInitial << ". " << friendMiddleInitial << ". " << friendLastName << ".\n";
+
+    return 0;
+}
+
+// ===================================================
+/* OUTPUT:
+Enter your first name: Devom 
+Enter your last name: Brahmbhatt
+Hi Devom Brahmbhatt. What is the last name of your friend? Tolkein   
+What is his first initial? J
+Wait a minute, what is his middle initial? R
+I cannot believe your friend is J. R. Tolkein.
+*/
+// ===================================================
