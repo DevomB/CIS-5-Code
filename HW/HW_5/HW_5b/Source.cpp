@@ -16,7 +16,7 @@ int main() {
             letter++;
             count++;
 
-            if (count % 18 == 0) {  // Print 5 letters per row
+            if (count % 18 == 0) {  // Print 18 letters per row
                 cout << endl << "\t";
             }
         }
