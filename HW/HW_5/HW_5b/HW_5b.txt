@@ -1,0 +1,45 @@
+// Included: HW_5b
+// ===================================================
+// Program: HW_5b
+// ===================================================
+// Programmer: Devom Brahmbhatt         
+// Class: CIS 5
+// ===================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char choice, letter;
+
+    cout << "Do you wish to see (U)ppercase or (L)owercase letters? ";
+    cin >> choice;
+
+    if (choice == 'U' || choice == 'u') {
+        letter = 'A';
+        do {
+            cout << letter << '\t';
+            letter++;
+        } while (letter <= 'Z');
+    }
+    else if (choice == 'L' || choice == 'l') {
+        letter = 'a';
+        do {
+            cout << letter << '\t';
+            letter++;
+        } while (letter <= 'z');
+    }
+    else {
+        cout << "The entry is incorrect.";
+    }
+
+    return 0;
+}
+
+
+
+// ===================================================
+/* OUTPUT:
+
+*/
+// ===================================================

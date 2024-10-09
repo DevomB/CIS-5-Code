@@ -1,0 +1,55 @@
+// Included: Lab_5b
+// ===================================================
+// Program: Lab_5b 
+// ===================================================
+// Programmer: Devom Brahmbhatt         
+// Class: CIS 5
+// ===================================================
+
+#include <iostream>
+#include <fstream> 
+using namespace std;
+
+int main() {
+    ifstream infile;
+
+    infile.open("c:\\values\\numbers.txt");
+
+    if (!infile) {
+        cerr << "Error opening file!" << endl;
+        return 1;
+    }
+
+    int number;
+    int sum = 0;
+
+    while (!infile.eof()) {
+        infile >> number;
+        if (infile) {  
+            sum += number;
+            cout << number << endl; 
+        }
+    }
+
+    infile.close();
+
+    cout << "The total sum is: " << sum << endl;
+
+    return 0;
+}
+
+// ===================================================
+/* OUTPUT:
+297
+3457
+764
+369
+897
+44
+97
+234
+9864
+12
+The total sum is: 16035
+*/
+// ===================================================
