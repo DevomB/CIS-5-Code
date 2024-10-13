@@ -1,0 +1,5 @@
+Enter 3 values:
+15
+35
+68
+The data has been written to file.

@@ -3,10 +3,10 @@ using namespace std;
 
 int main() {
     int numAsterisks;
+    int count = 1;
 
     cout << "How many asterisks do you want to see? ";
     cin >> numAsterisks;
-    int count = 1;
 
     do {
         cout << "*" << "\t";
