@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    COmm inputFile("C:\\data.txt"); 
+    inputFile("C:\\data.txt"); 
 
     if (!inputFile) {
         cerr << "Error opening file!" << endl;
