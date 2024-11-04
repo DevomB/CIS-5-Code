@@ -1,0 +1,58 @@
+// Included: All Assignments in the file
+// ===================================================
+// Program: The Name of the Program 
+// ===================================================
+// Programmer: Devom Brahmbhatt         
+// Class: CIS 5
+// ===================================================
+
+#include <iostream>
+#include <string>
+#include "prototypes.h"
+
+using namespace std;
+
+int main() {
+    int id;
+    string name;
+    double gpa;
+
+    getRecord(id, name, gpa);
+    displayRecord(id, name, gpa);
+
+    return 0;
+}
+
+void getRecord(int& id, std::string& name, double& gpa) {
+    cout << "Enter a student record:" << endl;
+    cout << "ID: ";
+    cin >> id;
+    cin.ignore(); 
+
+    cout << "NAME: ";
+    getline(cin, name);
+    cout << "GPA: ";
+    cin >> gpa;
+}
+
+void displayRecord(const int& id, const std::string& name, const double& gpa) {
+    system("CLS");
+
+    cout << "STUDENT RECORD" << endl;
+    cout << "ID: " << id << endl;
+    cout << "NAME: " << name << endl;
+    cout << "GPA: " << gpa << endl;
+}
+
+// ----------------- Prototypes.h --------------------
+void getRecord(int& id, std::string& name, double& gpa);
+void displayRecord(const int& id, const std::string& name, const double& gpa);
+
+// ===================================================
+/* OUTPUT:
+STUDENT RECORD
+ID: 32420
+NAME: Devom Brahm
+GPA: 0.01
+*/
+// ===================================================
