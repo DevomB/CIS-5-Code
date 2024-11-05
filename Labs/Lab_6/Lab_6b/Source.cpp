@@ -1,6 +1,19 @@
 #include <iostream>
 using namespace std;
 
+float getBalance();
+float getDeposit();
+float calcNewBalance(float balance, float deposit);
+void displayBalance(float newBalance);
+
+int main() {
+    float balance = getBalance();
+    float deposit = getDeposit();
+    float newBalance = calcNewBalance(balance, deposit);
+    displayBalance(newBalance);
+    return 0;
+}
+
 float getBalance() {
     float balance;
 
@@ -25,12 +38,4 @@ float calcNewBalance(float balance, float deposit) {
 
 void displayBalance(float newBalance) {
     cout << "Your new balance is $" << newBalance << "." << endl;
-}
-
-int main() {
-    float balance = getBalance();
-    float deposit = getDeposit();
-    float newBalance = calcNewBalance(balance, deposit);
-    displayBalance(newBalance);
-    return 0;
 }
