@@ -1,6 +1,16 @@
 #include <iostream>
 using namespace std;
 
+int getDivisor();
+int calcSquare(int num);
+void findNumbers(int divisor);
+
+int main() {
+    int divisor = getDivisor();
+    findNumbers(divisor);
+    return 0;
+}
+
 int getDivisor() {
     int divisor;
     cout << "Enter a divisor: ";
@@ -22,10 +32,3 @@ void findNumbers(int divisor) {
         }
     }
 }
-
-int main() {
-    int divisor = getDivisor();
-    findNumbers(divisor);
-    return 0;
-}
-

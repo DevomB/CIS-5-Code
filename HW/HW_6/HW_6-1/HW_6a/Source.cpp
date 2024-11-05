@@ -2,6 +2,23 @@
 #include <iostream>
 using namespace std;
 
+double getSide(char sideName);
+double calcSideC(double sideA, double sideB);
+void displaySideC(double sideC);
+
+int main() {
+    cout << "Enter two sides of a right triangle." << endl;
+
+    double sideA = getSide('A');
+    double sideB = getSide('B');
+
+    double sideC = calcSideC(sideA, sideB);
+
+    displaySideC(sideC);
+
+    return 0;
+}
+
 double getSide(char sideName) {
     cout << "Side " << sideName << ":" << endl;
     cout << "Please enter the dimension: ";
@@ -25,17 +42,3 @@ double calcSideC(double sideA, double sideB){
 void displaySideC(double sideC) {
     cout << "The dimension of Side C is: " << sideC << endl;
 }
-
-int main() {
-    cout << "Enter two sides of a right triangle." << endl;
-
-    double sideA = getSide('A');
-    double sideB = getSide('B');
-
-    double sideC = calcSideC(sideA, sideB);
-
-    displaySideC(sideC);
-
-    return 0;
-}
-
