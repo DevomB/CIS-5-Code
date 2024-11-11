@@ -1,15 +1,15 @@
 #include <iostream>
-#include <string>
-#include "prototypes.h"
-
 using namespace std;
 
+bool getData(int &width, int &height);
+bool isDataValid(int width, int height);
+void printBox(int width, int height);
 
 int main() {
     int width, height;
     char repeat;
     do {
-        system("CLS");
+        system("cls");
         bool validData = false;
         while (validData == false) {
             validData = getData(width, height);
@@ -20,27 +20,22 @@ int main() {
         cin >> repeat;
         repeat = toupper(repeat);
     } while (repeat == 'Y');
-
     return 0;
 }
 
-bool getData(int& width, int& height) {
-    cout << "This program will draw a rectangular box in stars." << endl << endl
-         << "The size of the box will be determined by the width and height" << endl 
-         << "that you specify." << endl << endl
-         << "Enter integer values, because the width represents the" << endl 
-         << "number of columns, and the height represents the number of rows." << endl << endl
-         << "The width should not exceed 79, because 80 is the " << endl
-         << "maximum screen width. Both width and height must be " << endl
-         << "at least 1." << endl << endl;
-
+bool getData(int &width, int &height) {
+    cout << "This program will draw a rectangular box in stars.\n\n"
+         << "The size of the box will be determined by the width and height\n"
+         << "that you specify.\n\n"
+         << "Enter integer values, because the width represents the\n"
+         << "number of columns, and the height represents the number of rows.\n"
+         << "\nThe width should not exceed 79, because 80 is the maximum screen\n"
+         << "width. Both width and height must be at least 1.\n\n";
 
     cout << "Please enter a width: ";
     cin >> width;
-
     cout << "Please enter a height: ";
     cin >> height;
-
     cout << endl;
 
     return isDataValid(width, height);
@@ -48,18 +43,19 @@ bool getData(int& width, int& height) {
 
 bool isDataValid(int width, int height) {
     if (width < 1 || width > 79 || height < 1) {
-        cout << "Incorrect data." << endl;
+        cout << "Incorrect data.\n\n";
         return false;
     }
     return true;
 }
 
 void printBox(int width, int height) {
-    for (int i = 0; i < height; ++i) {
-        for (int j = 0; j < width; ++j) {
+    cout << "Here is the box:\n";
+    for (int row = 0; row < height; ++row) {
+        for (int col = 0; col < width; ++col) {
             cout << "*";
         }
         cout << endl;
     }
+    cout << endl;
 }
-
