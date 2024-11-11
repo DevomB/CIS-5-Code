@@ -1,3 +1,11 @@
+// Included: All Assignments in the file
+// ===================================================
+// Program: The Name of the Program 
+// ===================================================
+// Programmer: Devom Brahmbhatt         
+// Class: CIS 5
+// ===================================================
+
 #include <iostream>
 using namespace std;
 
@@ -71,3 +79,32 @@ void printBox(int width, int height) {
 
     cout << endl;
 }
+
+
+
+// ===================================================
+/* OUTPUT:
+This program will draw a rectangular box in stars.
+
+The size of the box will be determined by the width and height
+that you specify.
+
+Enter integer values, because the width represents the
+number of columns, and the height represents the number of rows.
+
+The width should not exceed 79, because 80 is the maximum screen
+width. Both width and height must be at least 1.
+
+Please enter a width: 10
+Please enter a height: 5
+
+Here is the box:
+**********
+**********
+**********
+**********
+**********
+
+Do it again? (Y/N): N
+*/
+// ===================================================
