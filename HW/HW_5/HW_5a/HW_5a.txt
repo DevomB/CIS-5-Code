@@ -27,6 +27,12 @@ int main() {
 
 // ===================================================
 /* OUTPUT:
-
+How many times do you need to be reminded? 6
+#1: Do your homework!
+#2: Do your homework!
+#3: Do your homework!
+#4: Do your homework!
+#5: Do your homework!
+#6: Do your homework!
 */
 // ===================================================

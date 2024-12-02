@@ -1,3 +1,10 @@
+// Included: HW_6-3c
+// ===================================================
+// Program: HW_6-3c 
+// ===================================================
+// Programmer: Devom Brahmbhatt         
+// Class: CIS 5
+// ===================================================
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -48,3 +55,11 @@ void showResult(bool isValid) {
         cout << "Invalid." << endl;
     }
 }
+
+// ===================================================
+/* OUTPUT:
+Enter your ID: tommy
+Enter your PW: 12345 
+Valid.
+*/
+// ===================================================

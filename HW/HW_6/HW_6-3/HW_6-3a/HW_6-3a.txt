@@ -1,6 +1,6 @@
-// Included: All Assignments in the file
+// Included: HW_6-3a
 // ===================================================
-// Program: The Name of the Program 
+// Program: HW_6-3a
 // ===================================================
 // Programmer: Devom Brahmbhatt         
 // Class: CIS 5
