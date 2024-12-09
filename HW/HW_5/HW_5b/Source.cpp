@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     char choice;
-    cout << "Do you want to see the alphabet in (U)ppercase or (l)owercase? ";
+    cout << "Do you want to see the alphabet in (U)ppercase or (L)owercase? ";
     cin >> choice;
 
     if (choice == 'U' || choice == 'u') {

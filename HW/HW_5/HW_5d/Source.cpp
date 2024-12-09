@@ -1,28 +1,26 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
+
 using namespace std;
 
 int main() {
-    int num1;
-    int num2;
-    int num3;
+    int a;
+    int b;
+    int c;
+    cout << "Enter 3 values: " << endl;
+    cin >> a >> b >> c;
 
-    cout << "Enter 3 values:" << endl;
-    cin >> num1 >> num2 >> num3;
-
-    ofstream outFile("C:\\data.txt", ios::out);
-
-    if (!outFile) {
-        cerr << "File could not be opened." << endl;
+    ofstream file("C:\\data.txt");
+    if (!file.is_open()) {
+        cerr << "Error: Could not open the file.\n";
         return 1;
     }
+    
+    file << a << "\n" << b << "\n" << c << "\n";
+    file.close();
 
-    outFile << num1 << endl;
-    outFile << num2 << endl;
-    outFile << num3 << endl;
-
-    outFile.close();
     cout << "The data has been written to file." << endl;
-
+    
     return 0;
 }

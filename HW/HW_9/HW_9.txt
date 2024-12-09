@@ -1,0 +1,125 @@
+// Included: HW_9
+// ===================================================
+// Program: HW_9 
+// ===================================================
+// Programmer: Devom Brahmbhatt         
+// Class: CIS 5
+// ===================================================
+
+----------- Source.cpp -------------------------------
+
+#include <iostream>
+#include "Student.h"
+using namespace std;
+
+int main() {
+    Student s1; 
+    Student s2(12345, "Tom Lee"); 
+
+    cout << "Here is student #1:" << endl;
+    s1.displayStudent();
+    cout << endl;
+
+    cout << "Here is student #2:" << endl;
+    s2.displayStudent();
+    cout << endl;
+
+    s1.setId(33333);
+    s1.setName("Bruce Lee");
+
+    cout << "After updating s1:" << endl;
+    
+    cout << "Here is student #1:" << endl;
+    s1.displayStudent();
+    cout << endl;
+
+    cout << "Here is student #2:" << endl;
+    s2.displayStudent();
+    cout << endl;
+
+    cout << "Student #2's ID is " << s2.getId() << "." << endl;
+
+    cout << "Student #1's name is " << s1.getName() << "." << endl;
+
+    return 0;
+}
+
+----------- Student.cpp ------------------------------
+
+#include "Student.h"
+#include <iostream>
+using namespace std;
+
+Student::Student() : id(0), name("") {}
+
+Student::Student(int idNum, const string& studentName) : id(idNum), name(studentName) {}
+
+void Student::setId(int idNum) {
+    id = idNum;
+}
+
+void Student::setName(const string& studentName) {
+    name = studentName;
+}
+
+int Student::getId() const {
+    return id;
+}
+
+string Student::getName() const {
+    return name;
+}
+
+void Student::displayStudent() const {
+    cout << "ID: " << id << endl;
+    cout << "Name: " << name << endl;
+}
+
+----------- Student.h --------------------------------
+
+#ifndef STUDENT_H
+#define STUDENT_H
+
+#include <string>
+using namespace std;
+
+class Student {
+private:
+    int id;
+    string name;
+
+public:
+    Student();
+    Student(int idNum, const string& studentName);
+    void setId(int idNum);
+    void setName(const string& studentName);
+    int getId() const;
+    string getName() const;
+    void displayStudent() const;
+};
+
+#endif
+
+// ===================================================
+/* OUTPUT:
+Here is student #1:
+ID: 0
+Name: 
+
+Here is student #2:
+ID: 12345
+Name: Tom Lee
+
+After updating s1:
+Here is student #1:
+ID: 33333
+Name: Bruce Lee
+
+Here is student #2:
+ID: 12345
+Name: Tom Lee
+
+Student #2's ID is 12345.
+Student #1's name is Bruce Lee.
+*/
+// ===================================================

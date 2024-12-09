@@ -10,36 +10,40 @@
 using namespace std;
 
 int main() {
-    char choice, letter;
-
-    cout << "Do you wish to see (U)ppercase or (L)owercase letters? ";
+    char choice;
+    cout << "Do you want to see the alphabet in (U)ppercase or (L)owercase? ";
     cin >> choice;
 
     if (choice == 'U' || choice == 'u') {
-        letter = 'A';
+        char letter = 'A';
+        cout << "Uppercase Alphabet:" << endl;
         do {
-            cout << letter << '\t';
+            cout << letter;
+            cout << "\t";
             letter++;
         } while (letter <= 'Z');
-    }
+        cout << endl;
+    } 
     else if (choice == 'L' || choice == 'l') {
-        letter = 'a';
+        char letter = 'a';
+        cout << "Lowercase Alphabet:" << endl;
         do {
-            cout << letter << '\t';
+            cout << letter;
+            cout << '\t';
             letter++;
         } while (letter <= 'z');
-    }
+        cout << endl;
+    } 
     else {
-        cout << "The entry is incorrect.";
+        cout << "The entry is incorrect." << endl;
     }
 
     return 0;
 }
 
-
-
 // ===================================================
 /* OUTPUT:
-
+Lowercase Alphabet:
+a       b       c       d       e       f       g       h       i       j       k       l       m       n       o       p       q       r       s       t       u       v       w       x       y       z
 */
 // ===================================================

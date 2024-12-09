@@ -1,5 +1,44 @@
-Enter 3 values:
-15
-35
-68
+// Included: HW_5d
+// ===================================================
+// Program: HW_5d 
+// ===================================================
+// Programmer: Devom Brahmbhatt         
+// Class: CIS 5
+// ===================================================
+
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+
+using namespace std;
+
+int main() {
+    int a;
+    int b;
+    int c;
+    cout << "Enter 3 values: " << endl;
+    cin >> a >> b >> c;
+
+    ofstream file("C:\\data.txt");
+    if (!file.is_open()) {
+        cerr << "Error: Could not open the file.\n";
+        return 1;
+    }
+    
+    file << a << "\n" << b << "\n" << c << "\n";
+    file.close();
+
+    cout << "The data has been written to file." << endl;
+    
+    return 0;
+}
+
+// ===================================================
+/* OUTPUT:
+Enter 3 values: 
+12
+32
+42
 The data has been written to file.
+*/
+// ===================================================
